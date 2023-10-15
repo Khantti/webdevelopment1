@@ -1,0 +1,128 @@
+/*Universal Selector*/
+
+*{
+	cursor: pointer;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+
+
+/*Font integrate
+(i)local machine integrate
+(ii)global integration/project folder integrate*/
+
+
+/*(i)local machine integrate*/
+/*body{
+	font-family: Arial;
+}*/
+
+/*.p1{
+	font-family: Arial;
+}
+.p2{
+	font-family: "Times New Roman";
+}
+.p3{
+	font-family: Century, Arial, "Times New Roman";
+}*/
+
+/*(ii) Global integration*/
+
+/*@-rules*/
+
+/*@font-face{
+	font-family: 'Stick';
+	src: url("./../font/Stick/Stick-Regular.ttf");
+
+	font-family: abc;
+	src: local('Akaya Telivigala'), url('./../font/Akaya_Telivigala/AkayaTelivigala-Regular.ttf') format(woff);
+}*/
+
+
+body{
+	font-family: 'Stick', sans-serif;
+}
+
+.p2{
+	font-family: 'Akaya Telivigala', cursive;
+}
+.p4{
+/*	font-family: 'Akaya Telivigala', 'Stick';*/
+
+	font-family: abc;
+
+/*	font-weight: bold;*/
+/*	font-weight: bolder;*/
+/*				100-900*/
+/*	font-weight: 600;*/
+
+/*	font-style: italic;*/
+	
+/*	text-transform: uppercase;*/
+/*	text-transform: lowercase;*/
+/*	text-transform: capitalize;*/
+
+/*	TEXT INDENTATION*/
+/*	text-indent: 50px;*/
+
+}
+
+.clickme{
+	text-decoration: none;
+/*	color: green;*/
+}
+
+/*pseudo class :*/
+.clickme:visited{
+	color: violet;
+}
+.clickme:hover{
+	color: red;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.menutext{
+	font-family: Cambria;
+	background-color: green;
+	text-decoration: none;
+	color: #fff;
+
+/*	padding: 10px;*/
+/*			top&bot left&right*/
+/*	padding: 10px 50px;*/
+/*			  top right bot left*/
+/*	padding: 10px 20px 30px 40px;*/
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	border-radius: 10px;
+
+	transition: all 2s;
+/*	transition: background-color 2s;*/
+/*	transition: background-color 2s, color 5s;*/
+}
+
+.menutext:hover{
+	background-color: orange;
+	color: #000;
+}
+
+.imgdesign{
+	width: 80px;
+	height: 80px;
+
+	cursor: pointer;
+
+	transition: all 1s;
+}
+.imgdesign:hover{
+	width: 100px;
+	height: 100px;
+}

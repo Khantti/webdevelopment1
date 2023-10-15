@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Array Method</title>
+</head>
+<body>
+  
+
+  <script type="text/javascript">
+  	 
+
+  	 //indexOf(value)
+
+  	 let arrcolors = ['red','green','pink','white','blue','black'];
+  	 console.log(arrcolors);
+  	 console.log(arrcolors.length);//6
+  	 console.log(arrcolors[3]);//white
+  	 console.log(arrcolors.indexOf("black"));//5
+  	 console.log(arrcolors.indexOf("orange"));//-1
+
+  	 //Array.isArray()
+  	 const name = "aung aung";
+  	 console.log(Array.isArray(name));//false
+  	 console.log(Array.isArray(arrcolors));//true
+    
+     //join('sign')
+  	 console.log(arrcolors.toString());//red,green,pink,white,blue,black
+  	 console.log(arrcolors.join());//red,green,pink,white,blue,black
+  	 console.log(arrcolors.join('-'));//red-green-pink-white-blue-black
+
+  	 const candys =['red','green','white','blue','black'];
+
+
+  	 candys[5]="pink";
+  	 candys[1]='skyblue';
+
+
+  	 console.log(candys);//(6)['red', 'skyblue', 'white', 'blue', 'black', 'pink']
+
+     //push(value) Note:: Add new value to array(add to back)
+
+  	 candys.push('orange');
+  	 candys.push('gold');
+  	 candys.push('violet','gray');
+
+  	 console.log(candys);//(10)['red', 'skyblue', 'white', 'blue', 'black', 'pink', 'orange', 'gold', 'violet', 'gray']
+
+
+
+  	 // unshift(value) Note:: Add new value to array (add to front)
+  	 candys.unshift('tomato');
+  	 candys.unshift('green');
+  	 candys.unshift('silver','steelblue');
+     
+     console.log(candys);
+
+     // shift() Note:: Remove value & index(take off from front)
+
+     candys.shift();
+     candys.shift();
+
+     console.log(candys);//(12)['green', 'tomato', 'red', 'skyblue', 'white', 'blue', 'black', 'pink', 'orange', 'gold', 'violet', 'gray']
+
+     // pop() Note:: Remove value & index(take off from back)
+
+     candys.pop();
+     candys.pop(); 
+
+     console.log(candys);//(10)['green', 'tomato', 'red', 'skyblue', 'white', 'blue', 'black', 'pink', 'orange', 'gold']
+
+     //Remove only value
+     delete candys[1];
+     delete candys[5];
+     console.log(candys);//(10)['green', empty, 'red', 'skyblue', 'white', 'blue', 'black', 'pink', 'orange', 'gold']
+     console.log(candys[5]);//(10)['green', empty, 'red', 'skyblue', 'white', empty, 'black', 'pink', 'orange', 'gold']
+
+
+     //splice(index,length)
+
+     const paints = candys.splice(0,5);
+     console.log(paints);//['green', empty, 'red', 'skyblue', 'white']
+
+     //concat()
+
+     const arr1 =["aung aung","mg mg","tun tun","kyaw kyaw"];
+     const arr2 =["su su","yu yu","lu lu","nu nu"];
+     const arr3 =[10,20,30,40];
+
+     console.log(arr1+arr2);//aung aung,mg mg,tun tun,kyaw kyawsu su,yu yu,lu lu
+     console.log(arr1.concat(arr2));//(8)['aung aung', 'mg mg', 'tun tun', 'kyaw kyaw', 'su su', 'yu yu', 'lu lu', 'nu nu']
+     console.log(arr3.concat(arr1));//(8)[10, 20, 30, 40, 'aung aung', 'mg mg', 'tun tun', 'kyaw kyaw']
+
+     //sort() Array Sorting
+
+     const combinearrs = arr1.concat(arr2);
+     console.log(combinearrs);//(8)['aung aung', 'mg mg', 'tun tun', 'kyaw kyaw', 'su su', 'yu yu', 'lu lu', 'nu nu']
+     console.log(combinearrs[0]);//aung aung
+     console.log(combinearrs[5]);//yu yu
+
+
+     // A to Z
+
+     console.log(combinearrs.sort());//(8)['aung aung', 'kyaw kyaw', 'lu lu', 'mg mg', 'nu nu', 'su su', 'tun tun', 'yu yu']
+
+
+
+     // Just Reverse
+     console.log(combinearrs.reverse());//(8)['yu yu', 'tun tun', 'su su', 'nu nu', 'mg mg', 'lu lu', 'kyaw kyaw', 'aung aung']
+
+     const arrnumbers = [200,300,400,150,100,4,2,30,5,6,77,600,850,1];
+
+     console.log(arrnumbers);//(14)[200, 300, 400, 150, 100, 4, 2, 30, 5, 6, 77, 600, 850, 1]
+     // console.log(arrnumbers.sort());
+     // console.log(arrnumbers.reverse());
+
+     console.log(arrnumbers.sort(function(a,b){
+       // return a-b;//0 to 1
+        return b-a; // 1 to 0
+     }))
+
+
+
+
+  </script>
+
+
+</body>
+</html>
+
+<!-- 31.7.2023
+     1.8.2023 -->

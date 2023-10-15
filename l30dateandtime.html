@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<htmL>
+<head>
+	<title>Date and Time</title>
+</head>
+<body>
+
+	<div class="footer">
+		<small>Copyright <span id="autoyear">2023</span> . BBC News Web Design</small>
+	</div>
+
+	<script type="text/javascript">
+		
+		let date = new Date();
+		console.log(date);
+		console.log(new Date());
+
+		// let getdate = new Date().getDate();
+		let getdate = date.getDate();
+		console.log(getdate); //23
+
+		// let hour = new Date().getHours();
+		let hour = date.getHours();
+		console.log(hour); //20
+
+		let minute = date.getMinutes();
+		console.log(minute);
+
+		let second = date.getSeconds();
+		console.log(second); 
+
+		// 1s = 1000ms
+		// 1 Jan 1970 > upto now
+		let time = new Date().getTime();
+		console.log(time);
+
+		let now = Date.now();
+		console.log(now);
+
+		// array
+		// 0 	1 	2 	3  .......10 	11
+		//[jan, feb, mar, apr, may, jun, july, aug, sept, oct, nov, dec]
+		let month = date.getMonth();
+		console.log(month);
+
+		// 0 	1 	2 	3 	4 	5 	6
+		// ['sun','mon','tue','wed','thu','fri','sat']
+		let day = date.getDay();
+		console.log(day);
+
+		let year = date.getFullYear();
+		console.log(year);
+
+		let utcyear = date.getUTCFullYear();
+		console.log(utcyear);
+
+		document.getElementById("autoyear").innerText = year;
+
+		// m d y hr:m:s
+		let birthday = new Date('7-10-2020');
+		birthday = new Date('8-1-2023 11:35:00');
+		birthday = new Date('Aug 1 2023 11:35:00');
+		birthday = new Date('August 1 2023 11:35:00');
+		birthday = new Date('8/1/2023 11:35:00');
+
+		console.log(birthday);
+
+		birthday.setMonth(2); // Wed Mar 01 2023 11:35:00 GMT+0630 (Myanmar Time)
+		birthday.setDate(12); // Sun Mar 12 2023 11:35:00 GMT+0630 (Myanmar Time)
+		birthday.setFullYear(2008); // Sun Mar 12 2008 11:35:00 GMT+0630 (Myanmar Time)
+
+		birthday.setHours(15); // Sun Mar 12 2023 15:35:00 GMT+0630 (Myanmar Time)
+		birthday.setMinutes(30); // Sun Mar 12 2023 15:30:00 GMT+0630 (Myanmar Time)
+		birthday.setSeconds(50); // Sun Mar 12 2023 15:30:50 GMT+0630 (Myanmar Time)
+
+		console.log(birthday);  
+
+	</script>
+
+</body>
+</htmL>
+
+<!-- new Date();
+
+class Date{
+	public function minute(){
+
+	}
+	public function second(){
+
+	}
+} -->

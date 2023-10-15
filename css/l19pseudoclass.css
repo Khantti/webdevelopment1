@@ -1,0 +1,55 @@
+/*Pseudo Class (:) */
+
+.div1{
+	width: 300px;
+	height: 100px;
+	background-color: green;
+}
+
+/*.div1:first-child{
+	background-color: orange;
+	color: red;
+}
+.div1:last-child{
+	background-color: grey;
+	color: blue;
+}*/
+
+/*.div1:first-of-type{
+	background-color: orange;
+	color: blue;
+}
+.div1:last-of-type{
+	background-color: grey;
+	color: blue;
+}*/
+
+/*.div1:nth-child(7){
+	background-color: blue;
+	color: #fff;
+}*/
+
+/*.div1:nth-child(even){
+	background-color: blue;
+	color: #fff;
+}*/
+
+/*.div1:nth-child(odd){
+	background-color: blue;
+	color: #fff;
+}*/
+
+/*.div1:nth-of-type(1){
+	background-color: blue;
+	color: #fff;
+}*/
+
+/*.div1:nth-of-type(odd){
+	background-color: blue;
+	color: #fff;
+}*/
+
+/*.div1:nth-of-type(even){
+	background-color: blue;
+	color: #fff;
+}*/
